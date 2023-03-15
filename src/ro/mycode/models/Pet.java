@@ -8,6 +8,14 @@ public class Pet {
     private String race = "";
     private String name = "";
 
+    public Pet(int id, int ownerId, int age, String race, String name) {
+        this.id = id;
+        this.ownerId = ownerId;
+        this.age = age;
+        this.race = race;
+        this.name = name;
+    }
+
     public Pet(String text) {
         String[] strings = text.split(",");
         this.id = Integer.parseInt(strings[0]);
@@ -58,7 +66,8 @@ public class Pet {
     }
 
     public String descriere() {
-        String descriere = "Id-ul animalului este " + id + ", rasa este " + race + " si se numeste " + name;
+        String descriere = "Id-ul animalului este " + id + ", id-ul stapanului este " + ownerId + ", rasa este " + race +
+                " si se numeste " + name + " si are " + age + " ani";
         return descriere;
     }
 }

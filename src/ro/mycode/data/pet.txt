@@ -1,5 +1,5 @@
 1,1,1,British Shorthair,Luna
-2,2,2,Maine Coon,Simba
+2,1,2,Maine Coon,Simba
 3,3,3,Sphynx,Cleo
 4,4,4,Persan,Garfield
 5,5,5,Scottish Fold,Whiskers
