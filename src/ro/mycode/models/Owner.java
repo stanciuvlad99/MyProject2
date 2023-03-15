@@ -8,6 +8,14 @@ public class Owner {
     private String email = "";
     private String password = "";
 
+    public Owner(int id, String lastName, String firstName, int age, String email, String password){
+        this.id=id;
+        this.lastName=lastName;
+        this.firstName=firstName;
+        this.age=age;
+        this.email=email;
+        this.password=password;
+    }
     public Owner(String text) {
         String[] strings = text.split(",");
         this.id = Integer.parseInt(strings[0]);

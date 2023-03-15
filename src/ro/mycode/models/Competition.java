@@ -5,6 +5,11 @@ public class Competition {
     private String name = "";
     private String location = "";
 
+    public Competition(int id, String name, String location){
+        this.id=id;
+        this.name=name;
+        this.location=location;
+    }
     public Competition(String text) {
         String[] strings = text.split(",");
         this.id = Integer.parseInt(strings[0]);
