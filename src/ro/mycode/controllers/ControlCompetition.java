@@ -35,4 +35,29 @@ public class ControlCompetition {
             System.out.println(competitions.get(i).descriere());
         }
     }
+
+    //functie ce returneaza concursul, primeste competiton id ca parametru
+    public Competition findById(int competitionId){
+        for (int i=0; i<competitions.size(); i++){
+            if (competitions.get(i).getId()==competitionId){
+                return competitions.get(i);
+            }
+        }
+        return null;
+    }
+
+    //todo: functie ce returneaza cuncurs, primeste nume ca parametru
+    public Competition findByName(String name){
+        for (int i=0; i<competitions.size(); i++){
+            if (competitions.get(i).getName().equals(name)){
+                return competitions.get(i);
+            }
+        }
+        return null;
+    }
+
+    //todo: functie ce elimina un concurs din baza de date, primeste constructor ca parametru
+    public void delete(Competition competition){
+        this.competitions.remove(competition);
+    }
 }
