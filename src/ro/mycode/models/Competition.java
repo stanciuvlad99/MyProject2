@@ -45,4 +45,8 @@ public class Competition {
         String descriere = "Id-ul concursului este " + id + ", numele este " + name + ", iar locatia este " + location;
         return descriere;
     }
+
+    public String toSave(){
+        return this.id+","+this.name+","+this.location;
+    }
 }

@@ -3,6 +3,8 @@ package ro.mycode.controllers;
 import ro.mycode.models.Enrolment;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -99,5 +101,25 @@ public class ControlEnrolment {
 
     public int idCealMaiFrecventatConcurs(){
         return pozitieMaximaConcurs(frecvenata());
+    }
+
+    public String toSave(){
+        String save="";
+        for (int i=0; i<enrolments.size(); i++){
+            save+=enrolments.get(i).toSave()+"\n";
+        }
+        return save;
+    }
+
+    public void save(){
+        try {
+            File file = new File(FINAL_URL);
+            FileWriter fileWriter = new FileWriter(file);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+            printWriter.print(toSave());
+            printWriter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

@@ -3,3 +3,8 @@
 3,The International Bengal Cat Society Show,Berkshire-Marea Britanie
 4,The International Siberian Cat Show,Moscova-Rusia
 5,The International Cat Exhibition,Milano-Italia
+6,World Cat Show,Dublin-Germania
+7,Cat Elegance and Grace Competition,Paris-Franta
+8,Cat Agility Competition,New York-Statele Unite
+9,National Cat Show,Birmingham-Marea Britanie
+10,Cat Beauty Contest,Birmingham-Tokyo-Japonia

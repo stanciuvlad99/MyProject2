@@ -3,3 +3,8 @@
 3,andreea.georgescu@email.com,andreeageorge1234,Georgescu,Andreea
 4,alexandru.stanescu@email.com,alexandrustan1234,Stanescu,Alexandru
 5,maria.dumitrescu@email.com,mariadum1234,Dumitrescu,Maria
+6,radu.tudor@example.com,Radu123#,Tudor,Radu
+7,ioana.popa@example.com,Ioana456!,Popa,Ioana
+8,alexandru.iorga@example.com,Alex789#,Iorga,Alexandru
+9,laura.manea@example.com,Laura123@,Manea,Laura
+10,dan.badea@example.com,Dan456#,Badea,Dan

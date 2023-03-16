@@ -70,4 +70,8 @@ public class Pet {
                 " si se numeste " + name + " si are " + age + " ani";
         return descriere;
     }
+
+    public String toSave() {
+        return this.id + "," + this.ownerId + "," + this.age + "," + this.race + "," + this.name;
+    }
 }

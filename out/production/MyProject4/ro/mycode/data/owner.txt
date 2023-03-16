@@ -3,3 +3,8 @@
 3,Munteanu,Ana,33,anamunteanu@hotmail.com,muntana1234
 4,Dragomir,Victor,29,victordragomir@outlook.com,dragvuctor1234
 5,Stan,Elena,30,elenastan@gmail.com,stanelena12345
+6,Popescu,Ana,37,ana.popescu@example.com,Ana123!
+7,Ionescu,Andrei,42,andrei.ionescu@example.com,Andrei456@
+8,Dumitrescu,Maria,36,maria.dumitrescu@example.com,Maria789#
+9,Mihai,Ion,42,ion.mihai@example.com,Ion123#
+10,Stefanescu,Elena,33,elena.stefanescu@example.com,Elena456!

@@ -46,4 +46,8 @@ public class Enrolment {
                 ", iar id-ul concursului este " + competitionId;
         return descriere;
     }
+
+    public String toSave(){
+        return this.id+","+this.ownerId+","+this.competitionId;
+    }
 }
