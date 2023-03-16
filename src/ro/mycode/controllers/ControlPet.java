@@ -3,6 +3,8 @@ package ro.mycode.controllers;
 import ro.mycode.models.Pet;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -116,6 +118,26 @@ public class ControlPet {
         }
     }
 
+    //todo: functie ce returneaza toate animalel
+    public String toSave(){
+        String pets="";
+        for (int i=0; i<this.pets.size(); i++){
+            pets+=this.pets.get(i).toSave()+"\n";
+        }
+        return pets;
+    }
 
+    //todo: functie ce salveaza fisier text pets
+    public void save(){
+        try {
+            File file = new File(FINAL_URL);
+            FileWriter fileWriter = new FileWriter(file);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+            printWriter.print(this.toSave());
+            printWriter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
 }

@@ -76,4 +76,8 @@ public class Owner {
                 + " varsta este " + age + " de ani" + ", iar adresa de email si parola sunt " + email + " " + password;
         return descriere;
     }
+
+    public String toSave(){
+        return this.id+","+this.lastName+","+this.firstName+","+this.age+","+this.email+","+this.password;
+    }
 }

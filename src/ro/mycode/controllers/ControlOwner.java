@@ -3,6 +3,8 @@ package ro.mycode.controllers;
 import ro.mycode.models.Owner;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -63,5 +65,37 @@ public class ControlOwner {
     //todo: functie ce elimina un concurent, primeste constructor ca paeametru
     public void removeOwner(Owner owner){
         this.owners.remove(owner);
+    }
+
+    //todo: functie ce returneaza un concurent, primeste parametri email si parola
+    public Owner findByEmailPassword(String email, String password){
+        for (int i=0; i<owners.size(); i++){
+            if (owners.get(i).getEmail().equals(email) && owners.get(i).getPassword().equals(password)){
+                return owners.get(i);
+            }
+        }
+        return null;
+    }
+
+    //todo: functie ce returneaza toti concurentii
+    public String toSave(){
+        String save="";
+        for (int i=0; i<owners.size(); i++){
+            save+=owners.get(i).toSave()+"\n";
+        }
+        return save;
+    }
+
+    //todo: functie ce salveaza fisier text owner
+    public void save(){
+        try {
+            File file = new File(FINLA_URL);
+            FileWriter fileWriter = new FileWriter(file);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+            printWriter.print(toSave());
+            printWriter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

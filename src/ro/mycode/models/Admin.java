@@ -61,4 +61,8 @@ public class Admin {
                 ", iar numele si prenumele sunt" + lastName +" "+ firstName;
         return descrier;
     }
+
+    public String toSave(){
+        return this.id+","+this.email+","+this.password+","+this.lastName+","+this.firstName;
+    }
 }

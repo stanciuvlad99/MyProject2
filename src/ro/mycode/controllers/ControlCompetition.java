@@ -3,6 +3,8 @@ package ro.mycode.controllers;
 import ro.mycode.models.Competition;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -94,5 +96,25 @@ public class ControlCompetition {
         }
     }
 
+    //todo: functeie ce returneaza toate concursurile
+    public String toSave(){
+        String save="";
+        for (int i=0; i<competitions.size(); i++){
+            save+=competitions.get(i).toSave()+"\n";
+        }
+        return save;
+    }
+
+    public void save() {
+        try {
+            File file = new File(FINAL_URL);
+            FileWriter fileWriter = new FileWriter(file);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+            printWriter.print(toSave());
+            printWriter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
 }
