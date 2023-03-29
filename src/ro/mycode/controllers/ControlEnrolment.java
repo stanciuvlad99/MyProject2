@@ -86,6 +86,7 @@ public class ControlEnrolment {
         return frecventa;
     }
 
+    //todo: functie ce returneaza pozitia celui mai popular concurs, primeste vector ca parametru
     public int pozitieMaximaConcurs(int []vector){
         int max=vector[0];
         int pozitieMax=0;

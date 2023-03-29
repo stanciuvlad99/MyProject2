@@ -7,3 +7,4 @@
 7,Cat Elegance and Grace Competition,Paris-Franta
 8,Cat Agility Competition,New York-Statele Unite
 9,National Cat Show,Birmingham-Marea Britanie
+10,Cat Beauty Contest,Birmingham-Tokyo-Japonia
