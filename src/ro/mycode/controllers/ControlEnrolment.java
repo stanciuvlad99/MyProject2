@@ -86,6 +86,7 @@ public class ControlEnrolment {
         return frecventa;
     }
 
+    //todo: functie ce returneaza pozitia celui mai popular concurs, primeste vector ca parametru
     public int pozitieMaximaConcurs(int []vector){
         int max=vector[0];
         int pozitieMax=0;
@@ -104,10 +105,12 @@ public class ControlEnrolment {
     }
 
     public String toSave(){
+        int i=0;
         String save="";
-        for (int i=0; i<enrolments.size(); i++){
+        for (i=0; i<enrolments.size()-1; i++){
             save+=enrolments.get(i).toSave()+"\n";
         }
+        save+=enrolments.get(i).toSave();
         return save;
     }
 

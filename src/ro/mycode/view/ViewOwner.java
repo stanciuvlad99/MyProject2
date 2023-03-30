@@ -18,15 +18,17 @@ public class ViewOwner {
     private ControlEnrolment controlEnrolment;
     private ControlPet controlPet;
 
-    public ViewOwner() {
+    public ViewOwner(Owner owner) {
+        this.owner=owner;
         this.controlPet = new ControlPet();
         this.controlEnrolment = new ControlEnrolment();
         this.controlCompetition = new ControlCompetition();
-        this.owner = new Owner("1,Popescu,Maria,28,mariapopescu@gmail.com,popmaria1234");
         play();
     }
 
     private void menu() {
+        System.out.println("Bine ai venit, " + owner.getLastName() + " " + owner.getFirstName() + "!");
+        System.out.println();
         System.out.println("Apasati tasta 1 pentru a vedea toate consursurile");
         System.out.println("Apasati tasta 2 pentru a vedea concursurile la care suneteti inscris");
         System.out.println("Apasati tasta 3 pentru a va inscrie la un nou curs");

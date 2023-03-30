@@ -120,10 +120,12 @@ public class ControlPet {
 
     //todo: functie ce returneaza toate animalel
     public String toSave(){
+        int i=0;
         String pets="";
-        for (int i=0; i<this.pets.size(); i++){
+        for (i=0; i<this.pets.size()-1; i++){
             pets+=this.pets.get(i).toSave()+"\n";
         }
+        pets+=this.pets.get(i).toSave();
         return pets;
     }
 

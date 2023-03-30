@@ -3,6 +3,7 @@ package ro.mycode.view;
 import ro.mycode.controllers.ControlCompetition;
 import ro.mycode.controllers.ControlOwner;
 import ro.mycode.controllers.ControlPet;
+import ro.mycode.models.Admin;
 import ro.mycode.models.Competition;
 import ro.mycode.models.Owner;
 import ro.mycode.models.Pet;
@@ -11,11 +12,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ViewAdmin {
+    private Admin admin;
     private ControlPet controlPet;
     private ControlOwner controlOwner;
     private ControlCompetition controlCompetition;
 
-    public ViewAdmin() {
+    public ViewAdmin(Admin admin) {
+        this.admin=admin;
         this.controlPet=new ControlPet();
         this.controlCompetition = new ControlCompetition();
         this.controlOwner = new ControlOwner();
@@ -23,6 +26,8 @@ public class ViewAdmin {
     }
 
     public void menu() {
+        System.out.println("Bine ai venit, " + admin.getLastName() + " " + admin.getFirstName() + "!");
+        System.out.println();
         System.out.println("Apasati tasta 1 pentru a vedea toti concurentii");
         System.out.println("Apasati tasta 2 pentru a dauga un concurent in baza de date");
         System.out.println("Apasati tasta 3 pentru a elimina un concurent din baza de date");

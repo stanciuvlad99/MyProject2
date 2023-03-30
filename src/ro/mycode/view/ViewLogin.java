@@ -27,15 +27,11 @@ public class ViewLogin {
         Admin admin = controlAdmin.findByEmailPassword(email, password);
 
         if (owner != null) {
-            System.out.println("Bine ai venit, " + owner.getLastName() + " " + owner.getFirstName() + "!");
-            System.out.println();
-            ViewOwner viewOwner = new ViewOwner();
+            ViewOwner viewOwner = new ViewOwner(owner);
             System.out.println(viewOwner);
         }
         if (admin != null) {
-            System.out.println("Bine ai venit, " + admin.getLastName() + " " + admin.getFirstName() + "!");
-            System.out.println();
-            ViewAdmin viewAdmin = new ViewAdmin();
+            ViewAdmin viewAdmin = new ViewAdmin(admin);
             System.out.println(viewAdmin);
         }
         if (owner==null && admin==null){
