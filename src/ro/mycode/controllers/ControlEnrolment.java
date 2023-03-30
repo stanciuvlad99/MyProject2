@@ -105,10 +105,12 @@ public class ControlEnrolment {
     }
 
     public String toSave(){
+        int i=0;
         String save="";
-        for (int i=0; i<enrolments.size(); i++){
+        for (i=0; i<enrolments.size()-1; i++){
             save+=enrolments.get(i).toSave()+"\n";
         }
+        save+=enrolments.get(i).toSave();
         return save;
     }
 

@@ -79,10 +79,12 @@ public class ControlOwner {
 
     //todo: functie ce returneaza toti concurentii
     public String toSave(){
+        int i=0;
         String save="";
-        for (int i=0; i<owners.size(); i++){
+        for (i=0; i<owners.size()-1; i++){
             save+=owners.get(i).toSave()+"\n";
         }
+        save+=owners.get(i).toSave();
         return save;
     }
 

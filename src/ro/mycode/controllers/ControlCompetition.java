@@ -98,10 +98,12 @@ public class ControlCompetition {
 
     //todo: functeie ce returneaza toate concursurile
     public String toSave(){
+        int i=0;
         String save="";
-        for (int i=0; i<competitions.size(); i++){
+        for (i=0; i<competitions.size()-1; i++){
             save+=competitions.get(i).toSave()+"\n";
         }
+        save+=competitions.get(i).toSave();
         return save;
     }
 
